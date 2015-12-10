@@ -16,12 +16,12 @@ print(dim(trainLabels))
 # print("Class label:"); print(trainLabels[n])
 
 # train a model
-classifier <- learnModel(data = trainData, labels = trainLabels)
-predictedLabels <- testModel(classifier, trainData)
+classifier <- learnModel(data = trainData[1:1000, ], labels = trainLabels[1:1000, ])
+# predictedLabels <- testModel(classifier, trainData)
 
 #calculate accuracy on training data
-print("accuracy on training data:\t")
-print(sum(predictedLabels == trainLabels)/length(trainLabels))
+# print("accuracy on training data:\t")
+# print(sum(predictedLabels == trainLabels)/length(trainLabels))
 
 #calculate the following error metric for each class obtained on the train data:
 #Recall, precision, specificity, F-measure, FDR and ROC for each class separately. Use a package for ROC. 
